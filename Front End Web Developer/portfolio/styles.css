@@ -1,53 +1,87 @@
-<<<<<<< HEAD
 /* all elements */
 * {
   /*border-box makes it easier to size the boxes*/
   box-sizing: border-box;
 }
 
-.wrapper {
+.container {
   /* spacing */
   max-width: 940px;
   margin: 0 auto;
   
-  /* grid */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 tracks, 1 fraction each*/
+  /* flexbox */
+  display: flex;
+  flex-direction: column;
+/*   grid-template-columns: repeat(3, 1fr); 
   grid-gap: 16px;
-  grid-auto-rows: minmax(100px, auto);
+  grid-auto-rows: minmax(100px, auto); */
   
   /* text settings*/
 /*   font-family: Roboto, sans-serif; */
 }
 
 /* divs that are children of wrapper*/
-/* .wrapper > div {
-  border: 1px solid rgb(128,128,128);
+ .container > div {
+/*   border: 1px solid rgb(128,128,128);
   border-radius: 15px;
   background-color: rgb(245,245,245);
   padding: 1em;
-  color: #707;
-} */
+  color: #707; */
+  
 
+} 
+.projects{  
+order: 3;
+/* spacing */
+  max-width: 940px;
+  /* margin: 0 auto; */
+  /* padding:5px */
+  
+  /* flexbox */
+  display: flex;
+  flex-direction: row;
+}
+ .projects > div{  
+   border: 1px solid rgb(128,128,128);
+  border-radius: 15px;
+  background-color: rgb(245,245,245);
+  padding: 1em;
+  color: #707; 
+}
 .one {
-  grid-column: 1 / 4 ;
-  grid-row: 1;
+	        /* flex: 1 6 20%; */
+        order: 1;
+		margin: 5px;
+/*   grid-column: 1 / 4 ;
+  grid-row: 1; */
 }
 .two { 
-  grid-column: 1 / 4;
-  grid-row: 2 / 5;
+/* 	flex: 3 1 60%; */
+	order: 2;
+	margin: 5px;
+/*   grid-column: 1 / 4;
+  grid-row: 2 / 5; */
 }
 .three {
-  grid-column: 1;
-  grid-row: 5 / 7;
+flex: 1 1 33%; 
+        order: 1;
+		margin: 5px;
+/*   grid-column: 1;
+  grid-row: 5 / 7; */
 }
 .four {
-  grid-column: 2;
-  grid-row: 5 / 7;
+	flex: 1 1 33%; 
+	order: 2;
+	margin: 5px;
+/*   grid-column: 2;
+  grid-row: 5 / 7; */
 }
 .five {
-  grid-column: 3;
-  grid-row: 5 / 7;
+	flex: 1 1 33%; 
+	order: 3;
+	margin: 5px;
+/*   grid-column: 3;
+  grid-row: 5 / 7; */
 }
 .myName{
   font-family: Roboto, sans-serif;
@@ -60,77 +94,13 @@
   font-size: 24px;
   line-height: 10px;
 }
-img{
+.banner{
   width: 950px;
   border-radius: 15px;
   box-shadow: 5px 5px 15px  rgb(200, 200, 200);
   line-height: 50px;
-=======
-/* all elements */
-* {
-  /*border-box makes it easier to size the boxes*/
-  box-sizing: border-box;
 }
-
-.wrapper {
-  /* spacing */
-  max-width: 940px;
-  margin: 0 auto;
-  
-  /* grid */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 tracks, 1 fraction each*/
-  grid-gap: 16px;
-  grid-auto-rows: minmax(100px, auto);
-  
-  /* text settings*/
-/*   font-family: Roboto, sans-serif; */
-}
-
-/* divs that are children of wrapper*/
-/* .wrapper > div {
-  border: 1px solid rgb(128,128,128);
-  border-radius: 15px;
-  background-color: rgb(245,245,245);
-  padding: 1em;
-  color: #707;
-} */
-
-.one {
-  grid-column: 1 / 4 ;
-  grid-row: 1;
-}
-.two { 
-  grid-column: 1 / 4;
-  grid-row: 2 / 5;
-}
-.three {
-  grid-column: 1;
-  grid-row: 5 / 7;
-}
-.four {
-  grid-column: 2;
-  grid-row: 5 / 7;
-}
-.five {
-  grid-column: 3;
-  grid-row: 5 / 7;
-}
-.myName{
-  font-family: Roboto, sans-serif;
-  text-align: right;
-  line-height: 10px;
-}
-.myTitle{
-  font-family: Roboto, sans-serif;
-  text-align: right;
-  font-size: 24px;
-  line-height: 10px;
-}
-img{
-  width: 950px;
-  border-radius: 15px;
-  box-shadow: 5px 5px 15px  rgb(200, 200, 200);
-  line-height: 50px;
->>>>>>> 00cb0c6bf10591eb57398e348de2a0e99af2f5aa
+.logo{
+  width: 75px;
+  float: left;
 }
