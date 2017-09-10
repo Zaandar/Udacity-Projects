@@ -1,0 +1,41 @@
+/* add your CSS here */
+.interestingFact {
+  font-style: italic ;
+}
+
+.animalInfo {
+  border-style: solid;
+  border-color: rgb(30, 59, 112);
+  border-width: thin;
+  padding: 15px;
+}
+
+.details{
+  background-color: rgb(220, 226, 237)
+}
+
+span {
+  font-weight: bold;
+  color: rgb(30, 59, 112);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+  width: 300px
+}
+
+body{
+  width: 350px;
+  box-shadow: 10px 10px 5px  rgb(220, 226, 237);
+  font-family: 'Roboto', sans-serif;
+  color: rgb(2, 14, 35);
+}
+
+h3{
+  color: rgb(30, 59, 112);
+}
