@@ -1,106 +1,82 @@
 /* all elements */
+
 * {
-  /*border-box makes it easier to size the boxes*/
-  box-sizing: border-box;
+  background: #FFF;
+  /*color: #4736F6;*/
 }
 
 .container {
   /* spacing */
   max-width: 940px;
   margin: 0 auto;
-  
   /* flexbox */
   display: flex;
   flex-direction: column;
-/*   grid-template-columns: repeat(3, 1fr); 
-  grid-gap: 16px;
-  grid-auto-rows: minmax(100px, auto); */
-  
-  /* text settings*/
-/*   font-family: Roboto, sans-serif; */
 }
 
-/* divs that are children of wrapper*/
- .container > div {
-/*   border: 1px solid rgb(128,128,128);
-  border-radius: 15px;
-  background-color: rgb(245,245,245);
-  padding: 1em;
-  color: #707; */
-  
-
-} 
-.projects{  
-order: 3;
-/* spacing */
-  max-width: 940px;
-  /* margin: 0 auto; */
-  /* padding:5px */
-  
-  /* flexbox */
+.projects {
+  padding: .2vw;
+  font-size: 0;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
-  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
 }
- .projects > div{  
-   border: 1px solid rgb(128,128,128);
+
+.projects div {
+  -webkit-box-flex: auto;
+  /* ios */
+  -ms-flex: auto;
+  /* windows */
+  flex: auto;
+  /* other */
+  width: 250px;
+  margin: .5vw;
+}
+
+.projects div img {
+  width: 100%;
+  height: auto;
   border-radius: 15px;
-  background-color: rgb(245,245,245);
-  padding: 1em;
-  color: #707; 
+  box-shadow: 5px 5px 15px rgb(100, 100, 100);
 }
-.one {
-	        /* flex: 1 6 20%; */
-        order: 1;
-		margin: 5px;
-/*   grid-column: 1 / 4 ;
-  grid-row: 1; */
+
+.myInfo {
+  margin: 5px;
 }
-.two { 
-/* 	flex: 3 1 60%; */
-	order: 2;
-	margin: 5px;
-/*   grid-column: 1 / 4;
-  grid-row: 2 / 5; */
-}
-.three {
-flex: 1 1 33%; 
-        order: 1;
-		margin: 5px;
-/*   grid-column: 1;
-  grid-row: 5 / 7; */
-}
-.four {
-	flex: 1 1 33%; 
-	order: 2;
-	margin: 5px;
-/*   grid-column: 2;
-  grid-row: 5 / 7; */
-}
-.five {
-	flex: 1 1 33%; 
-	order: 3;
-	margin: 5px;
-/*   grid-column: 3;
-  grid-row: 5 / 7; */
-}
-.myName{
+
+.myName {
   font-family: Roboto, sans-serif;
   text-align: right;
   line-height: 10px;
+  color: #555;
 }
-.myTitle{
+
+.myTitle {
   font-family: Roboto, sans-serif;
   text-align: right;
   font-size: 24px;
   line-height: 10px;
+  color: #777;
 }
-.banner{
-  width: 950px;
+
+.mainImage {
+  margin: 5px;
+}
+
+.banner {
+  width: 940px;
   border-radius: 15px;
-  box-shadow: 5px 5px 15px  rgb(200, 200, 200);
+  box-shadow: 5px 5px 15px rgb(100, 100, 100);
   line-height: 50px;
 }
-.logo{
-  width: 75px;
+
+.logo {
+  width: 125px;
   float: left;
 }
