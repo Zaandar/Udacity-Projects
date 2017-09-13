@@ -1,0 +1,78 @@
+* {
+  font-family: Roboto, sans-serif;
+  background: #373737;
+  color: #DCD0C0;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 125px;
+  float: left;
+}
+
+.myName {
+  text-align: right;
+  line-height: 10px;
+}
+
+.myTitle {
+  text-align: right;
+  font-size: 24px;
+  /*line-height: 20px;*/
+  margin-bottom: 30px;
+}
+
+.banner {
+  width: 940px;
+  border-radius: 15px;
+  line-height: 50px;
+}
+
+.projectsTitle {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.projects {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects div {
+  -webkit-box-flex: auto;
+  /* ios */
+  -ms-flex: auto;
+  /* windows */
+  flex: auto;
+  /* other */
+  width: 250px;
+  margin: .5vw;
+}
+
+.projects div img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.projectLabel {
+  width: 150px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  line-height: 25px;
+}
