@@ -1,36 +1,50 @@
+$(function(){
+    let cats = $(".cat");
+    let buttons = $("button");
 
-var cats = $(".cat");
-var buttons = $("button");
+    // let viewList = {
+    //
+    // };
 
-function hideAllCats(){
-	for (var i=0; i<cats.length; i++){
-		$(cats[i]).hide();
-	}
-}
+    let viewCat = {
+        hideAllCats: function ()
+        {
+            for (let i = 0; i < cats.length; i++) {
+                $(cats[i]).hide();
+            }
+        }
+    };
 
-function bindButtonToCat(idNumber){
-	$("#button"+idNumber).click(function(){
-		hideAllCats();
-		$("#cat"+idNumber).show();
-	})
-}
+    // let model = {
+    //
+    // };
 
-function bindCounterToCat(idNumber){
-	var cat = "#cat"+idNumber
-	$(cat).click(function(){
-		var count = $(cat+" > .counter").text();
-		count = parseInt(count) + 1;
-		$(cat+" > .counter").text(count);
-	})
-}
+    let octopus = {
+         bindButtonToCat: function(idNumber) {
+            $("#button" + idNumber).click(function () {
+                viewCat.hideAllCats();
+                $("#cat" + idNumber).show();
+            });
+        },
 
-for (var i=1; i<=buttons.length; i++){
-	bindButtonToCat(i);
-}
+         bindCounterToCat: function(idNumber) {
+            let cat = "#cat" + idNumber;
+            $(cat).click(function () {
+                let count = $(cat + " > .counter").text();
+                count = parseInt(count) + 1;
+                $(cat + " > .counter").text(count);
+            });
+        }
+    };
 
-for (var i=1; i<=cats.length; i++){
-	bindCounterToCat(i);
-}
+    for (let i = 1; i <= buttons.length; i++) {
+        octopus.bindButtonToCat(i);
+    }
 
-hideAllCats();
-$("#cat1").show();
+    for (let i = 1; i <= cats.length; i++) {
+        octopus.bindCounterToCat(i);
+    }
+
+    viewCat.hideAllCats();
+    $("#cat1").show();
+});
